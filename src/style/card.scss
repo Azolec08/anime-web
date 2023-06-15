@@ -1,0 +1,14 @@
+*{
+    padding:0;
+    margin:0;
+}
+.card_container
+{
+    display:grid;
+    grid-template-rows:1fr;
+    place-items:center;
+    padding:10px;
+    background:#eee;
+   
+
+}

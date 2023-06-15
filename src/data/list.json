@@ -1,0 +1,36 @@
+[
+    {
+        "id":1,
+        "title":"5 Centimeter Per Second",
+        "img":"./cardimage/centimeter.jpg",
+        "year":"2007"
+
+    },
+    {
+        "id":2,
+        "title":"Your Lie In April",
+        "img":"./images/backgroundylia.jpg",
+        "year":"2015",
+        "text":""
+
+    },
+    {
+        "id":3,
+        "title":"I Want To Eat Your Pancreas",
+        "img":"./cardimage/iwteyp.jpeg",
+        "year":"2018",
+        "Text":""
+    },
+    {
+        "id":4,
+        "title":"Your Name",
+        "img":"./cardimage/yourn.jpeg",
+        "year":"2007"
+    },
+    {
+        "id":5,
+        "title":"Attack On Titan",
+        "img":"./cardimage/aot.jpeg",
+        "year":"2009"
+    }
+]
