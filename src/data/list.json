@@ -2,35 +2,91 @@
     {
         "id":1,
         "title":"5 Centimeter Per Second",
-        "img":"./cardimage/centimeter.jpg",
-        "year":"2007"
+        "img":"./cardimage/second.jpeg",
+        "year":2007,
+        "text":"Makoto Shinkai",
+        "trailer":"https://www.youtube.com/watch?v=WfUkwBnEWpU",
+        "song":"./song/missingyou.mp3"
+
 
     },
     {
         "id":2,
         "title":"Your Lie In April",
         "img":"./images/backgroundylia.jpg",
-        "year":"2015",
-        "text":""
+        "year":2015,
+        "text":"Naoshi Arakawa",
+        "trailer":"https://www.youtube.com/watch?v=PcMRAe-6zds",
+        "song":"./song/orange.mp3"
+
+        
 
     },
     {
         "id":3,
         "title":"I Want To Eat Your Pancreas",
         "img":"./cardimage/iwteyp.jpeg",
-        "year":"2018",
-        "Text":""
+        "year":2018,
+        "text":"Yoru Sumino",
+        "trailer":"https://www.youtube.com/watch?v=MmoBvmJA9XI",
+        "song":"./song/wanna.mp3"
+
+        
     },
     {
         "id":4,
         "title":"Your Name",
         "img":"./cardimage/yourn.jpeg",
-        "year":"2007"
+        "year":2007,
+        "text":"Makoto Shinkai",
+        "trailer":"https://www.youtube.com/watch?v=vQLf8JoqUc8",
+        "song":"./song/yourname.mp3"
+
+
+
     },
     {
         "id":5,
         "title":"Attack On Titan",
         "img":"./cardimage/aot.jpeg",
-        "year":"2009"
+        "year":2009,
+        "text":"Hajime Isayama",
+        "trailer":"https://www.youtube.com/watch?v=MGRm4IzK1SQ",
+        "song":"./song/attackontitan.mp3"
+
+    },
+    {
+        "id":6,
+        "title":"One Piece",
+        "img":"./cardimage/op2.jpg",
+        "year":1999,
+        "text":"Eiichiro Oda",
+        "trailer":"https://www.youtube.com/watch?v=LHTYpWI3S6Q",
+        "song":"./song/onepiece.mp3"
+
+    },
+    {
+        "id":7,
+        "title":"Code Geass",
+        "img":"./cardimage/geass4.jpg",
+        "year":1999,
+        "text":"Eiichiro Oda",
+        "trailer":"https://www.youtube.com/watch?v=v-AGjx0N24U",
+        "song":"./song/codegeass.mp3"
+
+    },
+    {
+        "id":8,
+        "title":"Shakugan No Shana",
+        "img":"./cardimage/shakugan.jpg",
+        "year":2006,
+        "text":"Atsuro Yomino",
+        "trailer":"https://www.youtube.com/watch?v=v-AGjx0N24U",
+        "song":"./song/Shakugan no Shana 灼眼のシャナOP 2 FULL - Being [KOTOKO].mp3"
+
     }
+    
+    
+   
+    
 ]

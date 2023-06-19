@@ -18,7 +18,7 @@ export default function header() {
           >
             <Nav.Link to="/" as={NavLink}>Home</Nav.Link>
             <Nav.Link to="/card" as={NavLink}>Anime List</Nav.Link>
-            <Nav.Link to="/card" as={NavLink}>Manhwa List</Nav.Link>
+            <Nav.Link >Manhwa List</Nav.Link>
 
            
           

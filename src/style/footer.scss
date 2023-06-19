@@ -6,16 +6,17 @@
 
 .footer-container
 {
-    height:30vh;
+    height:20vh;
     background:gray;
     display:grid;
-    grid-template-rows:1fr 65px 40px;
+    grid-template-rows:1fr 55px 35px;
 
     .image_container{
         display:flex;
         align-items:center;
         justify-content:center;
-        padding-top:10px;
+        padding:5px;
+        
         img{
             width:30px;
             cursor:pointer;
@@ -30,6 +31,13 @@
         align-items:center;
         font-size:10px;
         color:#fff;
+
+        h6{
+            display:flex;
+            justify-content:center;
+            margin:0;
+        }
+       
     }
 
     .copyright{
@@ -39,7 +47,8 @@
         background:#222;
         font-size:8px;
         color:#fff;
-        margin:5px 0 0 0;
+       
+        
     }
 
 }
