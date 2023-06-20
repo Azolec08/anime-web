@@ -2,11 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom'
+import '../style/card.scss'
+
 
 export default function header() {
   return (
     <>
-    <Navbar  bg="light" expand="lg">
+    <Navbar className="nav_bar"  expand="lg">
       <Container fluid>     
         <Navbar.Brand href="#"><img style={{width:"50px",cursor:"pointer"}} src="./images/logo2.png" alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

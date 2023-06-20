@@ -2,18 +2,84 @@
     padding:0;
     margin:0;
 }
+
+:root{
+    --primary:#eee;
+    --secondary:#222;
+    --tertiary:#fff;
+
+}
+
+#Dark{
+    --primary:#222;
+    --secondary:#eee;
+    --tertiary:#222;
+}
+
+nav{
+    background:var(--tertiary)
+}
+
+.dark_mode{
+    background:var(--tertiary);
+    color:var(--secondary);
+    padding:10px;
+    display:flex;
+    justify-content:center;
+
+    span{
+        margin:2px 5px 0 0;
+        font-weight:bold;
+    }
+}
+
+.recom_header{
+    display:flex;
+    justify-content:center;
+    padding:12px;
+    margin:0;
+    background:#5c5656;
+    color:#fff;
+    
+}
 .card_container
 {
     display:grid;
     grid-template-rows:1fr;
     grid-template-columns:1fr 1fr;
-    place-items:center;
-    background:#eee;    
+    justify-items: center;
+    background:var(--primary);    
+    padding:10px;
     
     
     .card_border{
         width:10rem;
         margin:5px 2px 5px 2px;
+
+        .accordion_header{
+
+            button{
+                padding:8px;
+                font-size:10px;
+                color:var(--secondary);
+                font-weight:bold;
+                border-radius:0;
+                background:var(--tertiary)
+                
+                   
+                
+            }
+            
+
+        }
+
+        .accordion_info{
+
+            font-size:10px;
+            background:var(--tertiary);
+            color:var(--secondary);
+            
+        }
 
         .card_img{
             width:100%;
@@ -24,6 +90,8 @@
             display:flex;
             flex-direction:column;
             align-items:center;
+            background:var(--tertiary);
+            color:var(--secondary);
 
             .card-title{
                 font-size:9px;
@@ -37,7 +105,7 @@
             }
 
             .card_btn{
-                font-size:8px;
+                font-size:6px;
                 padding:5px;
                 margin:0 1px 0 0;
 
@@ -63,12 +131,32 @@
     display:grid;
     grid-template-rows:unset;
     grid-template-columns:1fr ;
-    place-items:center;
-    padding:10px;
-    background:#eee;
+    justify-items:center;
+    padding:10px ;
+    background:var(--primary); 
 
     .card_border{
         width:25rem;
+
+        .accordion_header{
+
+            button{
+                padding:10px;
+                font-size:17px;
+                color:rgb(255, 0, 102);
+                font-weight:bold;
+                border-radius:0;
+                
+                   
+                
+            }
+        }
+
+        .accordion_info{
+
+            font-size:15px;
+            
+        }
 
         .card_img{
             width:100%;
@@ -112,13 +200,13 @@
 {
     display:grid;
     grid-template-rows:1fr;
-    grid-template-columns:1fr 1fr;
-    place-items:center;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-items:center;
     padding:10px;
-    background:#eee;
+    background:var(--primary); 
 
     .card_border{
-        width:30rem;
+        width:24rem;
 
         .card_img{
             width:100%;

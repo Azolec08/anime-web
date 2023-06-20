@@ -6,8 +6,9 @@
         "year":2007,
         "text":"Makoto Shinkai",
         "trailer":"https://www.youtube.com/watch?v=WfUkwBnEWpU",
-        "song":"./song/missingyou.mp3"
-
+        "song":"./song/missingyou.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Movie"
 
     },
     {
@@ -17,7 +18,10 @@
         "year":2015,
         "text":"Naoshi Arakawa",
         "trailer":"https://www.youtube.com/watch?v=PcMRAe-6zds",
-        "song":"./song/orange.mp3"
+        "song":"./song/orange.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
 
         
 
@@ -29,7 +33,10 @@
         "year":2018,
         "text":"Yoru Sumino",
         "trailer":"https://www.youtube.com/watch?v=MmoBvmJA9XI",
-        "song":"./song/wanna.mp3"
+        "song":"./song/wanna.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Movie"
+
 
         
     },
@@ -40,7 +47,10 @@
         "year":2007,
         "text":"Makoto Shinkai",
         "trailer":"https://www.youtube.com/watch?v=vQLf8JoqUc8",
-        "song":"./song/yourname.mp3"
+        "song":"./song/yourname.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Movie"
+
 
 
 
@@ -52,7 +62,10 @@
         "year":2009,
         "text":"Hajime Isayama",
         "trailer":"https://www.youtube.com/watch?v=MGRm4IzK1SQ",
-        "song":"./song/attackontitan.mp3"
+        "song":"./song/attackontitan.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
 
     },
     {
@@ -62,17 +75,23 @@
         "year":1999,
         "text":"Eiichiro Oda",
         "trailer":"https://www.youtube.com/watch?v=LHTYpWI3S6Q",
-        "song":"./song/onepiece.mp3"
+        "song":"./song/onepiece.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
 
     },
     {
         "id":7,
         "title":"Code Geass",
         "img":"./cardimage/geass4.jpg",
-        "year":1999,
-        "text":"Eiichiro Oda",
+        "year":2006,
+        "text":"Ichirō Ōkouchi",
         "trailer":"https://www.youtube.com/watch?v=v-AGjx0N24U",
-        "song":"./song/codegeass.mp3"
+        "song":"./song/codegeass.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
 
     },
     {
@@ -82,9 +101,65 @@
         "year":2006,
         "text":"Atsuro Yomino",
         "trailer":"https://www.youtube.com/watch?v=v-AGjx0N24U",
-        "song":"./song/Shakugan no Shana 灼眼のシャナOP 2 FULL - Being [KOTOKO].mp3"
+        "song":"./song/Shakugan no Shana 灼眼のシャナOP 2 FULL - Being [KOTOKO].mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
+    },
+    {
+        "id":9,
+        "title":"Voltes V",
+        "img":"./cardimage/download.jpeg",
+        "year":1977,
+        "text":"Tadao Nagahama",
+        "trailer":"https://www.youtube.com/watch?v=pMlF7ugWAZ0",
+        "song":"./song/Voltes V opening theme full version.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
+    },
+    {
+        "id":10,
+        "title":"Witch Blade",
+        "img":"./cardimage/witch.jpeg",
+        "year":2006,
+        "text":"Yasuko Kobayashi",
+        "trailer":"https://www.youtube.com/watch?v=dajmryRQnKc",
+        "song":"./song/Witchblade Segundo Ending.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
+    },
+    {
+        "id":11,
+        "title":"Special A",
+        "img":"./cardimage/speciala.jpg",
+        "year":2008,
+        "text":"Maki Minami",
+        "trailer":"https://www.youtube.com/watch?v=jLBmd0-9nZU",
+        "song":"./song/Special A opening 2 lyrics (full).mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
+    },
+    {
+        "id":12,
+        "title":"Yamato Nadeshiko",
+        "img":"./cardimage/yamato2.jpg",
+        "year":2006,
+        "text":"Tomoko Hayakawa",
+        "trailer":"https://www.youtube.com/watch?v=uUmucDTXJDE",
+        "song":"./song/wallflower ending song 2 full.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
 
     }
+    
     
     
    

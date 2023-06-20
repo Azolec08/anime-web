@@ -1,9 +1,9 @@
+import '../style/card.scss'
+import { useState , useRef, useEffect } from 'react'
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
-
 import Card from 'react-bootstrap/Card';
-import '../style/card.scss'
-import { useState , useRef } from 'react'
+import Accordion from 'react-bootstrap/Accordion';
 
 type listType = {
     img:string,
@@ -11,39 +11,44 @@ type listType = {
     year:number,
     text:string,  
     song?:string,
-    trailer:string
-  
-    
+    trailer:string ,
+    info:string,
+    genre:string
+   
 }   
 
- const CardComponents =  ({img,title,year,text,trailer,song} : listType) =>{
+ const CardComponents =  ({img,title,year,text,trailer,song,info,genre} : listType) =>{
 
-    
     const [playing, setPLaying] = useState(false)
 
-
-
+    const [play, setPlay] = useState(false)
 
     const inputRef = useRef<HTMLAudioElement>(null)
 
-  
+    
+
+    useEffect(()=>{
+      if(play){
+          
+        inputRef.current?.play()
+      }else{
+        
+        inputRef.current?.pause()
+      }
+      setPLaying(!playing)
+    },[play])
+
     const handlePlay = () =>{
-     
-            if(inputRef.current?.paused){
-             
-                inputRef.current?.play()
-            }else{
-               
-                inputRef.current?.pause()
-                                
-            }
-            setPLaying(!playing)
+      setPlay(!play)
+    }
+        
+        
+        
 
-          }
-
-        return(
+        
+      return(
           <div style={{margin:"5px 0 5px 0"}}>
-            <Card  className="card_border ">
+            <Card className="card_border" >
               <Card.Img variant="top" src={img} className="card_img" />
               <Card.Body className="card_body">
                 <Card.Title className="card_title">{title}</Card.Title>
@@ -51,38 +56,31 @@ type listType = {
                 <Card.Text  className="card_text">
                   {text}
                 </Card.Text>
-
                 <ToggleButtonGroup type="checkbox" >
-                  
-                    <ToggleButton value={1} className="card_btn">
+                  <ToggleButton value={1} className="card_btn">
                     <a href={trailer} target="_blank">
-                     Trailer
+                      Trailer
                     </a>
-                    </ToggleButton>
-                 
-
+                  </ToggleButton>
                   <audio ref={inputRef}>
                         <source src={song} type="audio/mp3"/>
                   </audio>
-
-                  <ToggleButton  value={2} onClick={handlePlay} variant={playing? "danger" : "success"} className="card_btn">
-                  {playing? "Pause": "Play"} Song
+                  <ToggleButton  value={2} onClick={handlePlay} variant={playing? "success" : "danger"} className="card_btn">
+                    {playing? "Play": "Pause"} Song
                   </ToggleButton>
-                  <ToggleButton  value={3} variant="secondary" className="card_btn">
-                    Info
+                  <ToggleButton  value={3} variant="secondary" className="card_btn" >
+                    {genre}
                   </ToggleButton>
                 </ToggleButtonGroup>
-                {/* <div>
-                <a href={trailer} target="_blank">
-                    <Button className="card_btn" variant="primary">Anime Trailer</Button>    
-                </a>
-                    <audio ref={inputRef}>
-                        <source src={song} type="audio/mp3"/>
-                    </audio>
-                <Button className="card_btn" variant={playing? "danger" : "success"} onClick={handlePlay} >{playing? "Pause": "Play"} Song</Button>
-                </div> */}
-
               </Card.Body>
+              <Accordion>
+                <Accordion.Item eventKey="0" className="accordion_item">
+                  <Accordion.Header className="accordion_header">Information</Accordion.Header>
+                  <Accordion.Body className="accordion_info">
+                    {info}
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </Card>
            
           </div>

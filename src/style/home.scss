@@ -5,12 +5,16 @@
     font-family:arial;
 }
 
+
+
 .accordion_body{
 
     display:flex;
     align-items:center;
     justify-content:space-around;
     background-size:cover;
+
+
    
 
     
@@ -50,7 +54,7 @@
                 padding:15px;
                 cursor:pointer;
                 background:none;
-                color:#fff;
+                
                 font-size:20px;
                 font-weight:bold;
                 z-index:1;
@@ -58,7 +62,6 @@
                 border:none;
                 transition: 700ms;
                 animation-name:animaxx;
-                background-image:url(./images/iwteypbackground.jpeg);
                 background-size:cover;
                 animation-duration: 5s;
                 animation-timing-function: ease-in-out;
@@ -70,7 +73,7 @@
 
                 .link{
                     text-decoration:none;
-                    color:#fff;
+                    color:#eee;
                   
                 }
                 
