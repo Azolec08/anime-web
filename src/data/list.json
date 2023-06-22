@@ -5,7 +5,7 @@
         "img":"./cardimage/second.jpeg",
         "year":2007,
         "text":"Makoto Shinkai",
-        "trailer":"https://www.youtube.com/watch?v=WfUkwBnEWpU",
+        "trailer":"https://www.youtube.com/watch?v=wdM7athAem0",
         "song":"./song/missingyou.mp3",
         "info":"Mark Angelo Celoza",
         "genre":"Movie"
@@ -158,7 +158,35 @@
         "genre":"Episode"
 
 
+    },
+    {
+        "id":13,
+        "title":"Mai Hime",
+        "img":"./cardimage/hime.jpg",
+        "year":2004,
+        "text":"Hajime Yatate",
+        "trailer":"https://www.youtube.com/watch?v=Zaiu4u88d6E",
+        "song":"./song/Kimi Ga Sora Datta.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
+    },
+    {
+        "id":14,
+        "title":"Fushigi Yugi",
+        "img":"./cardimage/yuugi3.jpg",
+        "year":1995,
+        "text":"Yuu Watase",
+        "trailer":"https://www.youtube.com/watch?v=-jIPf6c_p5c",
+        "song":"./song/Fushigi Yuugi Wakatte Ita Hazu FULL SONG.mp3",
+        "info":"Mark Angelo Celoza",
+        "genre":"Episode"
+
+
     }
+    
+    
     
     
     

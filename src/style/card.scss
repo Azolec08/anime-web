@@ -105,8 +105,8 @@ nav{
             }
 
             .card_btn{
-                font-size:6px;
-                padding:5px;
+                font-size:8px;
+                padding:2px;
                 margin:0 1px 0 0;
 
                 
@@ -129,21 +129,21 @@ nav{
     .card_container
 {
     display:grid;
-    grid-template-rows:unset;
-    grid-template-columns:1fr ;
+    grid-template-rows:1fr;
+    grid-template-columns:1fr 1fr ;
     justify-items:center;
     padding:10px ;
     background:var(--primary); 
 
     .card_border{
-        width:25rem;
+        width:15rem;
 
         .accordion_header{
 
             button{
                 padding:10px;
                 font-size:17px;
-                color:rgb(255, 0, 102);
+                color:var(--secondary);
                 font-weight:bold;
                 border-radius:0;
                 
@@ -160,7 +160,7 @@ nav{
 
         .card_img{
             width:100%;
-            height:100%;
+            height:120px;
         }
 
        
@@ -182,8 +182,8 @@ nav{
             }
 
             .card_btn{
-                font-size:unset;
-                padding:5px;
+                font-size:12px;
+                padding:2px;
                 margin:0 2px 0 0;
             }
         }
@@ -195,7 +195,7 @@ nav{
 }
 
 
-@media (min-width:890px){
+@media (min-width:990px){
     .card_container
 {
     display:grid;
@@ -207,6 +207,28 @@ nav{
 
     .card_border{
         width:24rem;
+
+        .accordion_header{
+
+            button{
+                padding:12px;
+                font-size:17px;
+                color:var(--secondary);
+                font-weight:bold;
+                border-radius:0;
+                
+                   
+                
+            }
+        }
+
+        .card_body{
+            .card_btn{
+                font-size:17px;
+                padding:2px;
+                margin:0 2px 0 0;
+            }
+        }
 
         .card_img{
             width:100%;

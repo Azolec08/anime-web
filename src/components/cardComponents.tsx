@@ -1,9 +1,10 @@
 import '../style/card.scss'
-import { useState , useRef, useEffect } from 'react'
+import { useState , useRef, useEffect, ChangeEvent } from 'react'
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import Card from 'react-bootstrap/Card';
 import Accordion from 'react-bootstrap/Accordion';
+import  {useUserStore}  from './zustand'
 
 type listType = {
     img:string,
@@ -14,12 +15,25 @@ type listType = {
     trailer:string ,
     info:string,
     genre:string
-   
-}   
+    
+}  
+
+// type zustand = {
+ 
+//   play:boolean,
+//   playing:boolean,
+//   setPlay: () => void,
+//   setPlaying: () => void, 
+//   handleChange: (event:React.ChangeEvent<HTMLInputElement>) => void
+// }
 
  const CardComponents =  ({img,title,year,text,trailer,song,info,genre} : listType) =>{
 
-    const [playing, setPLaying] = useState(false)
+    
+
+    // const {play,playing, setPlay,setPlaying} = useUserStore((state)  : zustand => state)
+
+    const [playing, setPlaying] = useState(false)
 
     const [play, setPlay] = useState(false)
 
@@ -35,11 +49,12 @@ type listType = {
         
         inputRef.current?.pause()
       }
-      setPLaying(!playing)
     },[play])
 
     const handlePlay = () =>{
       setPlay(!play)
+      setPlaying(!playing)
+
     }
         
         
@@ -65,8 +80,8 @@ type listType = {
                   <audio ref={inputRef}>
                         <source src={song} type="audio/mp3"/>
                   </audio>
-                  <ToggleButton  value={2} onClick={handlePlay} variant={playing? "success" : "danger"} className="card_btn">
-                    {playing? "Play": "Pause"} Song
+                  <ToggleButton  value={2} onClick={ handlePlay} variant={playing? "danger" : "success"} className="card_btn">
+                    {playing? "Pause": "Play"} Song
                   </ToggleButton>
                   <ToggleButton  value={3} variant="secondary" className="card_btn" >
                     {genre}
