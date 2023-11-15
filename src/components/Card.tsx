@@ -1,33 +1,33 @@
-import { useState } from 'react'
-import  CardComponents  from "./cardComponents"
-import CardList from '../data/list.json'
-import '../style/card.scss'
+import { useState, useContext } from "react";
+import CardComponents from "./cardComponents";
+import CardList from "../data/list.json";
+import "../style/card.scss";
+import "../style/popStyle.scss";
 import Switch from "react-switch";
 
+const Cards: React.FC = () => {
+  const [dark, setDark] = useState("Light");
 
-
-const Cards = () => {
-
-  const [dark , setDark] = useState("Light")
   return (
-    <>
+    <div className="position_relative">
       <div id={dark} className="dark_mode">
         <span>{dark} Mode</span>
-        <Switch onChange={() => setDark(dark === "Dark" ? "Light" : "Dark")} checked={dark === "Dark"} />
+        <Switch
+          onChange={() => setDark(dark === "Dark" ? "Light" : "Dark")}
+          checked={dark === "Dark"}
+        />
       </div>
-      <h3 className="recom_header">100 Anime Recommendations</h3>
-      <div className="card_container" id={dark} >
-        {CardList.map((list,index) =>{
-          return(
-            <div key={index} >
-              <CardComponents {...list}/>
+      <div className="card_container" id={dark}>
+        {CardList.map((list, index) => {
+          return (
+            <div key={index}>
+              <CardComponents {...list} />
             </div>
-          )
+          );
         })}
-        
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default Cards
+export default Cards;

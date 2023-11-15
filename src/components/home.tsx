@@ -1,38 +1,82 @@
-import { useState } from 'react'
-import '../style/home.scss'
+import Carousel from "react-bootstrap/Carousel";
+import "../style/home.scss";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-import { Link } from 'react-router-dom'
-import Accordion from 'react-bootstrap/Accordion'
-
-const home = () => {
-
+function CarouselFadeExample() {
   return (
-  <>
-   <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header></Accordion.Header>
-        <Accordion.Body className="accordion_body" style={{backgroundImage:"url(./cardimage/shakugan.jpg"}} >
-          <img src="./cardimage/shakugan5.jpg" alt="" />
-          <img src="./cardimage/shakugan2.png" alt="" />
-          <img src="./cardimage/shakugan7.jpg" alt="" />
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
     <div className="home-background">
-      <div className="home-container">
-        
-        <div className="img_container">
-          <img src="./cardimage/shakugan4.png" alt="" />
-          <div className="button" style={{backgroundImage:"url(./cardimage/shakugan2.png"}} >
-            <Link to="/card" className="link">
-              Anime List
-            </Link>
-          </div>
+      <div className="home-conatainer ">
+        <Carousel className="" fade>
+          <Carousel.Item>
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src="https://images.alphacoders.com/846/thumbbig-84631.webp"
+            />
+            <Carousel.Caption>
+              <h2>Enjoy Anime Music</h2>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              style={{ width: "100%" }}
+              src="https://images3.alphacoders.com/123/thumbbig-123189.webp"
+            />
+            <Carousel.Caption>
+              <h3>Watch Anime Trailers</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              style={{ width: "100%" }}
+              src="https://images2.alphacoders.com/742/thumbbig-742320.webp"
+            />
+            <Carousel.Caption>
+              <h3>Download Music</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              style={{ width: "100%" }}
+              src="https://images8.alphacoders.com/634/thumbbig-634244.webp"
+            />
+            <Carousel.Caption>
+              <h3>Anime Links</h3>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      <div style={{ width: "100%" }}>
+        <img
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+          src="https://w0.peakpx.com/wallpaper/225/914/HD-wallpaper-magic-emperor-manhua-black-dragon-blue-anime-boy-magic-emperor.jpg"
+          alt=""
+        />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "-290px",
+          }}
+        >
+          <Link to="/card">
+            <Button
+              style={{
+                background: "url(./images/background.png)",
+                padding: "10px",
+                width: "200px",
+              }}
+            >
+              Anime Music
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
-  </>
-  )
+  );
 }
 
-export default home
+export default CarouselFadeExample;

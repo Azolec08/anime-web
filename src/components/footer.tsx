@@ -1,8 +1,6 @@
-import '../style/footer.scss'
-
+import "../style/footer.scss";
 
 export default function footer() {
-
   return (
     <div className="footer-container">
       <div className="image_container">
@@ -17,7 +15,6 @@ export default function footer() {
       <div className="copyright">
         <span>&copy;2023 Mark Angelo Celoza | All Rights Reserved</span>
       </div>
-
     </div>
-  )
+  );
 }

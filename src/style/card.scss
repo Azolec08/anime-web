@@ -1,246 +1,233 @@
-*{
-    padding:0;
-    margin:0;
+:root {
+  --primary: #eee;
+  --secondary: #222;
+  --tertiary: #fff;
 }
 
-:root{
-    --primary:#eee;
-    --secondary:#222;
-    --tertiary:#fff;
-
+#Dark {
+  --primary: #222;
+  --secondary: #eee;
+  --tertiary: #222;
 }
 
-#Dark{
-    --primary:#222;
-    --secondary:#eee;
-    --tertiary:#222;
+nav {
+  background: var(--tertiary);
 }
 
-nav{
-    background:var(--tertiary)
+.dark_mode {
+  background: var(--tertiary);
+  color: var(--secondary);
+  padding: 11px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  span {
+    margin: 2px 5px 0 0;
+    font-weight: bold;
+  }
 }
 
-.dark_mode{
-    background:var(--tertiary);
-    color:var(--secondary);
-    padding:10px;
-    display:flex;
-    justify-content:center;
+.recom_header {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  margin: 0;
+  background: #5c5656;
+  color: #fff;
+}
+.card_container {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  background: var(--primary);
+  padding: 10px;
 
-    span{
-        margin:2px 5px 0 0;
-        font-weight:bold;
+  .card_border {
+    width: 10rem;
+    margin: 5px 2px 10px 2px;
+
+    .accordion_header {
+      button {
+        padding: 8px;
+        font-size: 10px;
+        color: var(--secondary);
+        font-weight: bold;
+        border-radius: 0;
+        background: var(--tertiary);
+      }
     }
+
+    .accordion_info {
+      font-size: 10px;
+      background: var(--tertiary);
+      color: var(--secondary);
+      padding: 0;
+    }
+
+    .card_img {
+      width: 100%;
+      height: 125px;
+    }
+
+    .card_body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--tertiary);
+      color: var(--secondary);
+
+      .card-title {
+        height: 25px;
+        font-size: 12px;
+        text-align: center;
+        padding-bottom: 2px;
+      }
+      .year {
+        font-size: 12px;
+        margin-bottom: -10px;
+      }
+
+      .card-text {
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+
+      .audioContainer {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 5px 15px 5px 15px;
+
+        .bt_n {
+          font-size: 8px;
+          padding: 3px;
+        }
+
+        .bt_n:hover {
+          .btn2 {
+            color: red;
+          }
+        }
+
+        .audio {
+          width: 100%;
+          height: 20px;
+        }
+      }
+    }
+    .accordion_item {
+      .accordion_header {
+        .video_text {
+          font-size: 13px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
 
-.recom_header{
-    display:flex;
-    justify-content:center;
-    padding:12px;
-    margin:0;
-    background:#5c5656;
-    color:#fff;
-    
+.pop_up {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22, 23, 23, 0.8);
+  position: fixed;
+  top: 0;
 }
-.card_container
-{
-    display:grid;
-    grid-template-rows:1fr;
-    grid-template-columns:1fr 1fr;
+
+@media (min-width: 510px) {
+  .card_container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
-    background:var(--primary);    
-    padding:10px;
-    
-    
-    .card_border{
-        width:10rem;
-        margin:5px 2px 5px 2px;
+    padding: 10px;
+    background: var(--primary);
 
-        .accordion_header{
+    .card_border {
+      width: 16rem;
 
-            button{
-                padding:8px;
-                font-size:10px;
-                color:var(--secondary);
-                font-weight:bold;
-                border-radius:0;
-                background:var(--tertiary)
-                
-                   
-                
-            }
-            
+      .accordion_info {
+        font-size: 15px;
+      }
 
+      .card_img {
+        width: 100%;
+        height: 120px;
+      }
+
+      .card_body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card-title {
+          font-size: unset;
+          margin-bottom: unset;
         }
 
-        .accordion_info{
-
-            font-size:10px;
-            background:var(--tertiary);
-            color:var(--secondary);
-            
+        .card-text {
+          font-size: unset;
+          margin-bottom: none;
         }
 
-        .card_img{
-            width:100%;
-            height:100px;
+        .audioContainer {
+          width: 100%;
+          padding: 3px;
+
+          .bt_n {
+            font-size: 15px;
+            padding: 3px;
+          }
+          .audio {
+            height: 24px;
+          }
         }
-
-        .card_body{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            background:var(--tertiary);
-            color:var(--secondary);
-
-            .card-title{
-                font-size:9px;
-                margin-bottom:2px;
-            }
-            
-            .card-text{
-                font-size:9px;
-                margin-bottom:2px;
-
-            }
-
-            .card_btn{
-                font-size:8px;
-                padding:2px;
-                margin:0 1px 0 0;
-
-                
-                a{
-                    color:#fff;
-                    text-decoration:unset;
-                }
-            }
-        }
-
-        
-
-
-
+      }
     }
-
+  }
 }
 
-@media (min-width:510px){
-    .card_container
-{
-    display:grid;
-    grid-template-rows:1fr;
-    grid-template-columns:1fr 1fr ;
-    justify-items:center;
-    padding:10px ;
-    background:var(--primary); 
+@media (min-width: 990px) {
+  .card_container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 10px;
+    background: var(--primary);
 
-    .card_border{
-        width:15rem;
+    .card_border {
+      width: 24rem;
 
-        .accordion_header{
-
-            button{
-                padding:10px;
-                font-size:17px;
-                color:var(--secondary);
-                font-weight:bold;
-                border-radius:0;
-                
-                   
-                
-            }
+      .card_body {
+        .card_btn {
+          font-size: 17px;
         }
 
-        .accordion_info{
+        .audioContainer {
+          padding: 3px;
+          width: auto;
 
-            font-size:15px;
-            
+          .bt_n {
+            font-size: 17px;
+            padding: 3px;
+          }
+          .audio {
+            width: auto;
+            height: 35px;
+          }
         }
+      }
 
-        .card_img{
-            width:100%;
-            height:120px;
-        }
-
-       
-
-        .card_body{
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-
-            .card-title{
-                font-size:unset;
-                margin-bottom:unset;
-            }
-            
-            .card-text{
-                font-size:unset;
-                margin-bottom:unset;
-
-            }
-
-            .card_btn{
-                font-size:12px;
-                padding:2px;
-                margin:0 2px 0 0;
-            }
-        }
-
+      .card_img {
+        width: 100%;
+        height: 250px;
+      }
     }
-
+  }
 }
-
-}
-
-
-@media (min-width:990px){
-    .card_container
-{
-    display:grid;
-    grid-template-rows:1fr;
-    grid-template-columns:1fr 1fr 1fr;
-    justify-items:center;
-    padding:10px;
-    background:var(--primary); 
-
-    .card_border{
-        width:24rem;
-
-        .accordion_header{
-
-            button{
-                padding:12px;
-                font-size:17px;
-                color:var(--secondary);
-                font-weight:bold;
-                border-radius:0;
-                
-                   
-                
-            }
-        }
-
-        .card_body{
-            .card_btn{
-                font-size:17px;
-                padding:2px;
-                margin:0 2px 0 0;
-            }
-        }
-
-        .card_img{
-            width:100%;
-            height:250px;
-        }
-
-    }
-
-    
-
-}
-
-}
-
-
