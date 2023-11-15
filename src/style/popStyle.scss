@@ -25,18 +25,43 @@
       font-size: 15px;
       margin-bottom: 4px;
     }
-
-    .audioContainer {
-      margin: 5px 15px 5px 15px;
-      gap: 3px;
-
-      .audio {
-        height: 30px;
+    .relative_title {
+      width: 100%;
+      .title-container {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
         width: 100%;
+        padding: 5px 0 20px 0;
+
+        .music-title {
+          position: absolute;
+          animation: moveLeft 10s linear infinite;
+        }
       }
     }
   }
+
+  @keyframes moveLeft {
+    0% {
+      left: 100%;
+    }
+    100% {
+      left: -100%; /* Move the title outside the container width */
+    }
+  }
+
+  .audioContainer {
+    margin: 5px 15px 5px 15px;
+    gap: 3px;
+
+    .audio {
+      height: 30px;
+      width: 100%;
+    }
+  }
 }
+
 .accordion_item {
   padding: 0;
   height: 100%;

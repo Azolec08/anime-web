@@ -42,6 +42,13 @@ const CardComponents = ({
             <Card.Title className="card_title">{title}</Card.Title>
             <Card.Title className="card_title">{year}</Card.Title>
             <Card.Text className="card_text">{text}</Card.Text>
+            <div className="relative_title">
+              <div className="title-container">
+                <h6 className="music-title">
+                  This is a Really Long Music Title
+                </h6>
+              </div>
+            </div>
             <div className="audioContainer" style={{ width: "100%" }}>
               <div className="audio">
                 <audio
