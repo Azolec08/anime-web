@@ -20,6 +20,7 @@ type listType = {
   info: string;
   genre: string;
   video: string;
+  songTitle: string;
 };
 
 const CardComponents = ({

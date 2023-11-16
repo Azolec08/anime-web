@@ -48,11 +48,7 @@ const CardComponents = ({ id, img, title, year, text }: listType) => {
                   <FavoriteIcon />
                 </Button>
               ) : (
-                <Button
-                  className="bt_n"
-                  variant="dark"
-                  onClick={() => addFavorite(id)}
-                >
+                <Button className="bt_n" variant="dark">
                   <FavoriteIcon style={{ color: "red" }} />
                 </Button>
               )}

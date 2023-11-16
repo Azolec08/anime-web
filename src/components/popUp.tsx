@@ -5,7 +5,6 @@ import Accordion from "react-bootstrap/Accordion";
 import ReactPlayer from "react-player";
 import { userContext } from "../store/createContextStore";
 import DeleteIcon from "@mui/icons-material/Delete";
-import ReactAudioPlayer from "react-audio-player";
 
 type listType = {
   id: number;
@@ -18,6 +17,7 @@ type listType = {
   info: string;
   genre: string;
   video: string;
+  songTitle: string;
 };
 
 const CardComponents = ({
@@ -28,6 +28,7 @@ const CardComponents = ({
   text,
   song,
   video,
+  songTitle,
 }: listType) => {
   const { deleteSongFavorites } = useContext(userContext);
   return (
@@ -44,9 +45,7 @@ const CardComponents = ({
             <Card.Text className="card_text">{text}</Card.Text>
             <div className="relative_title">
               <div className="title-container">
-                <h6 className="music-title">
-                  This is a Really Long Music Title
-                </h6>
+                <h6 className="music-title">{songTitle}</h6>
               </div>
             </div>
             <div className="audioContainer" style={{ width: "100%" }}>

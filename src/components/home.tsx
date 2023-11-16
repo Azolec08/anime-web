@@ -63,15 +63,7 @@ function CarouselFadeExample() {
           }}
         >
           <Link to="/card">
-            <Button
-              style={{
-                background: "url(./images/background.png)",
-                padding: "10px",
-                width: "200px",
-              }}
-            >
-              Anime Music
-            </Button>
+            <Button className="buttonLinkHome">Anime Music</Button>
           </Link>
         </div>
       </div>

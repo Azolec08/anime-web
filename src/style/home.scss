@@ -51,4 +51,35 @@
       }
     }
   }
+
+  .buttonLinkHome {
+    width: 170px;
+    height: 50px;
+    background-image: url(/public//images/background.png);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 510px) {
+  .home-background {
+    .buttonLinkHome {
+      margin-top: -700px;
+      width: 200px;
+      height: 80px;
+      background-image: url(/public//images/background.png);
+    }
+  }
+}
+
+@media (min-width: 990px) {
+  .home-background {
+    .buttonLinkHome {
+      margin-top: -1800px;
+
+      width: 250px;
+      height: 100px;
+      background-image: url(/public//images/background.png);
+    }
+  }
 }
