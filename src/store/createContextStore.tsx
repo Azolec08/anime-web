@@ -1,29 +1,42 @@
-import { createContext, useState, ReactNode, useRef } from "react";
-import allData from "../data/list.json";
+import { createContext, useState, ReactNode, useEffect } from "react";
+import axios from "axios";
+import AllData from "../data/list.json";
 
-interface contextTypes {
+type contextTypes = {
   currentSong: any[];
   show: boolean;
   favorite: any[];
   count: number;
+  get: any[];
   addSongFavorites: (songId: number) => void;
   deleteSongFavorites: (songId: number) => void;
   addFavorite: (songId: number) => void;
   minusFavorite: (songId: number) => void;
   handleAdd: () => void;
   handleMinus: () => void;
-}
+};
 
 export const userContext = createContext({} as contextTypes);
 
-interface childrenType {
+type childrenType = {
   children: ReactNode;
-}
+};
 
-export const UseContextProvider = ({ children }: childrenType) => {
+export function UseContextProvider({ children }: childrenType) {
+  const [get, setGet] = useState([]);
+
+  useEffect(() => {
+    async function callApi() {
+      const result = await axios.get("http://localhost:3009/anime");
+      setGet(result.data);
+    }
+
+    callApi();
+  }, [get]);
+
   const songAllData = () => {
     let currentSong = [];
-    for (let i = 0; i < allData.length + 1; i++) {
+    for (let i = 0; i < AllData.length + 1; i++) {
       currentSong[i] = 0;
     }
     return currentSong;
@@ -37,6 +50,7 @@ export const UseContextProvider = ({ children }: childrenType) => {
   const handleMinus = () => {
     setCount(count - 1);
   };
+
 
   const [currentSong, setCurrentSong] = useState(songAllData());
 
@@ -68,6 +82,7 @@ export const UseContextProvider = ({ children }: childrenType) => {
           show,
           favorite,
           count,
+          get,
           addSongFavorites,
           deleteSongFavorites,
           addFavorite,
@@ -80,4 +95,4 @@ export const UseContextProvider = ({ children }: childrenType) => {
       </userContext.Provider>
     </div>
   );
-};
+}

@@ -4,7 +4,6 @@ import Card from "react-bootstrap/Card";
 import { userContext } from "../store/createContextStore";
 import { Button } from "react-bootstrap";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-Button;
 
 type listType = {
   id: number;
@@ -19,7 +18,7 @@ type listType = {
   video: string;
 };
 
-const CardComponents = ({ id, img, title, year, text }: listType) => {
+const CardComponents = ({ id, title, year, text, img }: listType) => {
   const { addSongFavorites, addFavorite, favorite } = useContext(userContext);
 
   return (

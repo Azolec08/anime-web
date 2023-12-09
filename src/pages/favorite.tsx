@@ -1,23 +1,25 @@
 import { useContext, useState } from "react";
-import allData from "../data/list.json";
 import { CardFavorites } from "../components/cardFavorites";
 import { userContext } from "../store/createContextStore";
 import "../style/card.scss";
 import { Button } from "react-bootstrap";
+import AllData from "../data/list.json";
+import { MyCombobox } from "../components/SearchBar";
 
 function favorite() {
+  const { favorite, get } = useContext(userContext);
+
   const [search, setSearch] = useState("");
 
-  const [searchArray, setSearchArray] = useState(allData);
+  const [searchArray, setSearchArray] = useState(AllData);
 
   const handleSearchClick = () => {
-    const handleFilterFavorite = allData.filter((data) =>
+    const handleFilterFavorite = AllData.filter((data) =>
       data.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
     );
     setSearchArray(handleFilterFavorite);
   };
 
-  const { favorite } = useContext(userContext);
   return (
     <div>
       <div>
@@ -44,8 +46,12 @@ function favorite() {
           </Button>
         </div>
       </div>
+
+      <div>
+        <MyCombobox />
+      </div>
       <div className="card_container">
-        {searchArray.map((song) => {
+        {searchArray.map((song: any) => {
           if (favorite[song.id] !== 0) {
             return (
               <div key={song.id}>

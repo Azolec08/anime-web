@@ -7,7 +7,7 @@ import "../style/card.scss";
 import { userContext } from "../store/createContextStore";
 
 export default function header() {
-  const { favorite, count } = useContext(userContext);
+  const { count } = useContext(userContext);
 
   return (
     <>

@@ -36,7 +36,7 @@
 
         .music-title {
           position: absolute;
-          animation: moveLeft 10s linear infinite;
+          animation-name: moveLeft 10s linear infinite;
         }
       }
     }
